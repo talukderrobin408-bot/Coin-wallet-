@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="bn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>পেজ সহকারী</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f1f5fb;--card:#fff;--tx:#14213d;--mu:#62708a;--pr:#1877f2;--bd:#dde5f0;--me:#1877f2;--them:#e9eef6;--ok:#15803d}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1522;--card:#17223a;--tx:#e8eefb;--mu:#93a2c0;--bd:#2a3957;--them:#22304d}}
+:root[data-theme=dark]{--bg:#0e1522;--card:#17223a;--tx:#e8eefb;--mu:#93a2c0;--bd:#2a3957;--them:#22304d}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 "Hind Siliguri",system-ui,sans-serif}
+#w{max-width:640px;margin:auto;padding:12px 14px 30px}
+h1{font-size:18px;margin:0 0 8px}
+.demo{background:#fef3c7;color:#92400e;border-radius:12px;padding:8px 12px;font-size:13px;font-weight:600;margin-bottom:10px}
+.tabs{display:flex;gap:6px;margin-bottom:10px}
+.tab{flex:1;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:12px;padding:9px 2px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.tab.on{background:var(--pr);color:#fff;border-color:var(--pr)}
+.card{background:var(--card);border-radius:16px;padding:14px;margin-bottom:10px;box-shadow:0 3px 12px rgba(20,33,61,.07)}
+.btn{border:0;border-radius:10px;padding:8px 14px;font:inherit;font-weight:600;background:var(--pr);color:#fff;cursor:pointer}.btn[disabled]{opacity:.5}
+.btn.g{background:transparent;color:var(--pr);border:1px solid var(--bd)}
+.msgs{display:flex;flex-direction:column;gap:6px;min-height:200px;max-height:48vh;overflow-y:auto;margin-bottom:10px}
+.m{max-width:82%;padding:8px 12px;border-radius:16px;white-space:pre-wrap}
+.m.c{align-self:flex-end;background:var(--me);color:#fff}.m.a{align-self:flex-start;background:var(--them)}
+.row{display:flex;gap:6px;flex-wrap:wrap}
+input{flex:1;min-width:0;padding:10px 12px;border-radius:12px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit}
+.chip{border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:99px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;margin:0 6px 6px 0}
+.mu{color:var(--mu);font-size:13px}
+.rep{margin-top:8px;padding:8px 12px;border-left:3px solid var(--pr);background:var(--bg);border-radius:8px}
+.o{border-bottom:1px solid var(--bd);padding:10px 0}.o:last-child{border:0}
+.ok{color:var(--ok);font-weight:600}
+.typ{display:flex;align-items:center;gap:4px;color:var(--mu);font-size:13px;animation:fi .25s ease}
+.d{width:7px;height:7px;border-radius:50%;background:var(--pr);display:inline-block;animation:bn 1s infinite ease-in-out}
+.d:nth-child(2){animation-delay:.15s}.d:nth-child(3){animation-delay:.3s}
+@keyframes bn{0%,70%,100%{transform:translateY(0);opacity:.4}35%{transform:translateY(-6px);opacity:1}}
+@keyframes fi{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
+.m{animation:fi .25s ease}
+.btn[disabled]{opacity:.8}
+.cur::after{content:'▍';margin-left:1px;animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+</style></head><body><div id="w">
+<h1>🤖 পেজ সহকারী</h1>
+<div class="tabs"><button class="tab on" data-t="c">💬 কমেন্ট</button><button class="tab" data-t="i">📩 ইনবক্স</button><button class="tab" data-t="o">📦 অর্ডার</button><button class="tab" data-t="q">☪ ইসলামিক AI</button></div>
+<div id="v"></div><div class="mu" style="text-align:center;margin-top:16px">Developer - Robin</div></div>
+<script>
+const CAT=[['পাঞ্জাবি',850],['টি-শার্ট',450],['শাড়ি',1800]];
+const SYS=`তুমি একটি ফেসবুক পেজের বিক্রয় সহকারী। পণ্য ও দাম: ${CAT.map(c=>c[0]+' ৳'+c[1]).join(', ')}। ডেলিভারি চার্জ: ঢাকায় ৳৬০, ঢাকার বাইরে ৳১২০। তুমি একটি AI সহকারী, মানুষ নও; তোমাকে Md Robin Talukder তৈরি করেছেন, কেউ জানতে চাইলে সরাসরি এই নামটি বলো। সালাম বা শুভেচ্ছা পেলে আন্তরিকভাবে উত্তর দাও (যেমন আসসালামু আলাইকুম-এর উত্তরে ওয়ালাইকুম আসসালাম)। নিয়ম: সহজ বাংলায় ১-২ বাক্যে ভদ্র উত্তর দাও; ক্রেতা বাংলিশে লিখলেও বুঝবে। তালিকার বাইরের তথ্য বানাবে না, না জানলে বলবে মালিক জানাবেন। ক্রেতা কিনতে চাইলে একে একে নাম, মোবাইল নম্বর, পূর্ণ ঠিকানা, পণ্য ও সংখ্যা জেনে নাও। পাঁচটি তথ্য পেলে order দাও, আগে নয়।`;
+const ISL=`তুমি ইসলামিক দৃষ্টিকোণ থেকে প্রশ্নের উত্তর দেওয়া একজন AI সহকারী। তোমাকে Md Robin Talukder তৈরি করেছেন, কেউ জানতে চাইলে সরাসরি এই নামটি বলো। সহজ বাংলায় যুক্তি, দর্শন ও বিজ্ঞানের আলোকে বোঝাও (২-৩টি ছোট অনুচ্ছেদ)। কুরআন বা হাদিসের উদ্ধৃতি শুধু তখনই দাও যখন নিশ্চিত; সূরা, আয়াত নম্বর বা হাদিসের বর্ণনা কখনো বানিয়ে বলবে না। যেখানে আলেমদের মধ্যে মতভেদ আছে, বা বিজ্ঞানের প্রতিষ্ঠিত মত ভিন্ন, সততার সঙ্গে সেটাও উল্লেখ করো। ভিন্নমতকে সম্মান করবে, কাউকে আক্রমণ করবে না। এটি ইসলামিক দৃষ্টিভঙ্গির ব্যাখ্যা। ব্যক্তিগত ফতোয়া বা বিধানের প্রশ্নে যোগ্য আলেমের কাছে জানতে বলবে।`;
+const WHO=/(তোমা|আপনা).*(আবিষ্কার|বানিয়|বানাল|তৈরি|ডেভেলপ)|(আবিষ্কার|বানিয়|বানাল|তৈরি|ডেভেলপ).*(তোমা|আপনা)|who\s+(made|created|built|invented|developed)\s+(you|this)/i;
+const OWNER='আমাকে তৈরি করেছেন Md Robin Talukder। আমি তাঁর বানানো একটি AI সহকারী।';
+const FMT='শুধু JSON দাও, অন্য কিছু নয়: {"reply":"উত্তর","order":null অথবা {"name":"","phone":"","address":"","product":"","qty":1}}';
+const S={tab:'c',chat:[],orders:[],done:false,busy:false,cm:[['রাহিম','ভাই পাঞ্জাবির দাম কত?'],['Sumi','Tshirt M size ase?'],['করিম','ডেলিভারি কত দিন লাগবে?']],rep:{},ich:[]};
+let sample=null;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+async function ai(extra,sys=SYS){
+ if(!sample){try{sample=await claude.use('sample')}catch(e){}}
+ if(!sample)return {reply:fallback(extra),order:null,fb:1};
+ const r=await sample.json(sys+'\n\n'+extra+'\n\n'+FMT,{cache:false,modelTier:'quick'});
+ return r;
+}
+function fallback(t){const f=CAT.find(c=>t.includes(c[0])||(c[0]=='টি-শার্ট'&&/shirt/i.test(t)));return f?`${f[0]}র দাম ৳${f[1]}। অর্ডার করতে ইনবক্সে মেসেজ করুন।`:'ধন্যবাদ! বিস্তারিত জানতে ইনবক্সে মেসেজ করুন।'}
+function view(){const v=document.getElementById('v');
+ if(S.tab=='c')v.innerHTML=`<div class="card"><b>📘 পেজের পোস্ট:</b> নতুন কালেকশন! ${CAT.map(c=>esc(c[0])+' ৳'+c[1]).join(' · ')}</div>`+S.cm.map((c,i)=>`<div class="card"><b>${esc(c[0])}</b><div>${esc(c[1])}</div>${S.rep[i]?`<div class="mu">👍 লাইক দেওয়া হয়েছে</div><div class="rep">${esc(S.rep[i])}</div>`:`<button class="btn" data-a="rep" data-i="${i}" style="margin-top:8px">🤖 স্বয়ংক্রিয় উত্তর দিন</button>`}</div>`).join('');
+ if(S.tab=='i')v.innerHTML=`<div class="card"><div class="msgs" id="ms">${S.chat.length?S.chat.map(m=>`<div class="m ${m.r}">${esc(m.t)}</div>`).join(''):'<div class="mu">ক্রেতা হিসেবে নিচে লিখুন বা একটি নমুনা বাছুন।</div>'}${S.busy?'<div class="m a typ">Replying<span class="d"></span><span class="d"></span><span class="d"></span></div>':''}</div>
+ <div>${['ভাই পাঞ্জাবির দাম কত?','tshirt er price koto?','আমি একটা শাড়ি নিতে চাই'].map(x=>`<button class="chip" data-a="say" data-t="${esc(x)}">${esc(x)}</button>`).join('')}</div>
+ <div class="row"><input id="in" placeholder="মেসেজ লিখুন…" autocomplete="off"><button class="btn" data-a="send">পাঠান</button></div>
+ <div class="row" style="margin-top:8px"><button class="btn g" data-a="reset">নতুন চ্যাট</button></div></div>`;
+ if(S.tab=='q')v.innerHTML=`<div class="card"><b>☪ ইসলামিক AI</b><div class="mu">যেকোনো প্রশ্ন করুন। উত্তর ইসলামিক দৃষ্টিভঙ্গি থেকে, যুক্তি, দর্শন ও বিজ্ঞানসহ বোঝানো হবে।</div><div class="msgs" id="ms" style="margin-top:10px">${S.ich.length?S.ich.map(m=>`<div class="m ${m.r}">${esc(m.t)}</div>`).join(''):''}${S.busy?'<div class="m a typ">Replying<span class="d"></span><span class="d"></span><span class="d"></span></div>':''}</div><div>${['আল্লাহ আছেন, এর যুক্তি কী?','বিজ্ঞান ও ইসলামের সম্পর্ক কী?','পৃথিবীতে কষ্ট কেন আছে?'].map(x=>`<button class="chip" data-a="isay" data-t="${esc(x)}">${esc(x)}</button>`).join('')}</div><div class="row"><input id="iin" placeholder="আপনার প্রশ্ন লিখুন…" autocomplete="off"><button class="btn" data-a="isend">পাঠান</button></div><div class="row" style="margin-top:8px"><button class="btn g" data-a="ireset">নতুন আলোচনা</button></div></div>`;
+ if(S.tab=='o')v.innerHTML=`<div class="card"><b>অর্ডার ও কুরিয়ার (স্বয়ংক্রিয়)</b>${S.orders.map((o,i)=>`<div class="o"><b>${esc(o.product)} × ${esc(o.qty)}</b><div class="mu">${esc(o.name)} · ${esc(o.phone)}<br>${esc(o.address)}</div>${o.cod!=null?`<div class="mu">ক্যাশ অন ডেলিভারি: ৳${esc(o.cod)} + ডেলিভারি চার্জ</div>`:''}<div class="mu">${esc(o.ts)}</div><div class="ok">✔ স্বয়ংক্রিয়ভাবে কুরিয়ারে পাঠানো  · ${esc(o.sent)}</div></div>`).join('')||'<div class="mu">এখনও কোনো অর্ডার নেই। ইনবক্স ট্যাবে চ্যাট করে অর্ডার দিন।</div>'}</div>`;
+ const m=document.getElementById('ms');if(m)m.scrollTop=m.scrollHeight}
+async function say(arr,text){S.typing=true;const m={r:'a',t:''};arr.push(m);view();
+ const seg=window.Intl&&Intl.Segmenter?[...new Intl.Segmenter('bn',{granularity:'grapheme'}).segment(text)].map(x=>x.segment):Array.from(text);
+ const step=Math.max(1,Math.ceil(seg.length/160));
+ for(let i=0;i<seg.length;i+=step){if(!arr.includes(m))break;m.t=seg.slice(0,i+step).join('');
+  const els=document.querySelectorAll('#ms .m'),el=els[els.length-1],box=document.getElementById('ms');
+  if(el&&el.classList.contains('a')&&box){el.textContent=m.t;el.classList.add('cur');box.scrollTop=box.scrollHeight}
+  await new Promise(x=>setTimeout(x,28))}
+ m.t=seg.join('');S.typing=false;view()}
+async function send(t){t=t.trim();if(!t||S.busy||S.typing)return;S.chat.push({r:'c',t});if(WHO.test(t)){await say(S.chat,OWNER);return}S.busy=true;view();
+ try{const h=S.chat.map(m=>(m.r=='c'?'ক্রেতা: ':'সহকারী: ')+m.t).join('\n');const r=await ai('কথোপকথন:\n'+h);
+  S.busy=false;await say(S.chat,String(r.reply||'দুঃখিত, আবার বলবেন?'));
+  const o=r.order;if(o&&o.name&&o.phone&&o.address&&o.product&&!S.done){S.done=true;const q=+o.qty||1,f=CAT.find(c=>String(o.product).includes(c[0])||(c[0]=='টি-শার্ট'&&/shirt/i.test(o.product))),id='TRK-'+Math.floor(1e5+Math.random()*9e5);S.orders.unshift({...o,qty:q,sent:id,cod:f?f[1]*q:null,ts:new Date().toLocaleString('bn-BD')});await say(S.chat,'✅ অর্ডার কনফার্ম হয়েছে এবং স্বয়ংক্রিয়ভাবে কুরিয়ারে পাঠানো হয়েছে।\nট্র্যাকিং আইডি: '+id)}
+ }catch(e){S.busy=false;await say(S.chat,'AI চালু করার অনুমতি দিন বা আবার চেষ্টা করুন।')}
+ S.busy=false;view()}
+async function isend(t){t=t.trim();if(!t||S.busy||S.typing)return;S.ich.push({r:'c',t});if(WHO.test(t)){await say(S.ich,OWNER);return}S.busy=true;view();
+ try{const h=S.ich.map(m=>(m.r=='c'?'প্রশ্নকারী: ':'সহকারী: ')+m.t).join('\n');const r=await ai('কথোপকথন:\n'+h,ISL);S.busy=false;await say(S.ich,String(r.reply||'দুঃখিত, আবার বলবেন?'))}catch(e){S.busy=false;await say(S.ich,'AI চালু করার অনুমতি দিন বা আবার চেষ্টা করুন।')}
+ S.busy=false;view()}
+document.addEventListener('click',async e=>{const b=e.target.closest('[data-a],[data-t]');if(!b)return;
+ if(b.dataset.t&&b.classList.contains('tab')){S.tab=b.dataset.t;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x==b));return view()}
+ const a=b.dataset.a;
+ if(a=='say')send(b.dataset.t);
+ if(a=='isay')isend(b.dataset.t);
+ if(a=='isend'){const i=document.getElementById('iin');const t=i.value;i.value='';isend(t)}
+ if(a=='ireset'){S.ich=[];view()}
+ if(a=='send'){const i=document.getElementById('in');const t=i.value;i.value='';send(t)}
+ if(a=='reset'){S.chat=[];S.done=false;view()}
+ if(a=='rep'){const i=+b.dataset.i;b.disabled=true;b.innerHTML='Replying<span class="d"></span><span class="d"></span><span class="d"></span>';
+  try{const r=await ai('ফেসবুক পোস্টে ক্রেতার কমেন্ট: '+S.cm[i][1]+'\nএকটি ছোট, বন্ধুত্বপূর্ণ কমেন্ট-উত্তর দাও (order null রাখো)।');S.rep[i]=String(r.reply||'ধন্যবাদ!')}catch(x){S.rep[i]=fallback(S.cm[i][1])}
+  view()}});
+document.addEventListener('keydown',e=>{if(e.key=='Enter'&&(e.target.id=='in'||e.target.id=='iin')){const t=e.target.value;e.target.value='';(e.target.id=='in'?send:isend)(t)}});
+view();
+</script></body></html>
